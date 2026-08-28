@@ -1,126 +1,135 @@
-/* 全体のベース設定 */
+/* a: ページ全体の基本設定 */
 body {
-  font-family: "Yu Gothic", "Helvetica", sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+  background-color: #faf8f5;
+  color: #333333;
+  font-family: "Yu Gothic", "游ゴシック", sans-serif;
+  line-height: 1.8;
   margin: 0;
   padding: 0;
 }
 
-/* 各要素に余白をつけて整えましょう */
-main, section, header, footer, aside, nav {
-  padding: 20px;
+/* b: ヘッダーのデザイン */
+header {
+  background-color: #2e5b37;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-/* ヘッダー */
-header {
-  background-color: #4CAF50;
-  color: white;
+header h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+header nav a:hover {
+  opacity: 0.7;
+}
+
+/* メインエリア全体のレイアウト */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 60px;
   text-align: center;
 }
 
-/* ナビゲーション全体 */
-nav {
-  background-color: #eee;
-  padding: 10px 20px;
+/* c: メインの各セクション */
+h2 {
+  display: inline-block;
+  border-bottom: 2px solid #2e5b37;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  color: #2e5b37;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+img {
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+/* Menuカード風デザイン */
+#menu > div {
   display: flex;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-nav li {
-  margin-right: 15px;
+#menu > div > div {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 150px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #333;
+#menu > div > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
-nav a:hover {
-  color: #4CAF50;
-  font-weight: bold;
-}
-
-/* セクション見出し */
-section h2 {
-  border-bottom: 2px solid #4CAF50;
-  padding-bottom: 5px;
-  margin-top: 30px;
-}
-
-/* 画像 */
-img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin: 10px 0;
-}
-
-/* 表 */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
+/* d: フォームの見た目 */
+#contact form {
+  max-width: 400px;
+  margin: 0 auto;
   text-align: left;
 }
 
-th {
-  background-color: #f0f0f0;
+#contact label {
+  display: block;
+  margin-bottom: 5px;
 }
 
-/* フォーム全体 */
-form {
-  margin-top: 20px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea,
-select {
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
+  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
-button {
-  background-color: #4CAF50;
-  color: white;
+
+#contact button {
+  width: 100%;
+  background-color: #2e5b37;
+  color: #ffffff;
   border: none;
-  padding: 10px 20px;
   border-radius: 4px;
+  padding: 12px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #45a049;
+#contact button:hover {
+  background-color: #1e3d24;
 }
 
-/* aside（補足情報） */
-aside {
-  background-color: #f1f1f1;
-  border-left: 5px solid #4CAF50;
-  margin: 30px 20px;
-  padding: 15px;
-}
-
-/* フッター */
+/* e: フッターのデザイン */
 footer {
-  background-color: #333;
-  color: white;
+  background-color: #2e5b37;
+  color: #ffffff;
   text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+  padding: 20px;
 }
